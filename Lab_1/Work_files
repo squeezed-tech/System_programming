@@ -1,0 +1,19 @@
+mkdir -p Work/"Лабораторная работа №1!" Work/"ФИО"
+cd Work
+touch 'Text @1' 'Text $2' 'Text #3'
+printf '%s\n%s\n' 'Птица говорун отличается умом и сообразительностью!' 'Отличается умом, отличается сообразительностью...' > 'Text @1'
+cp 'Text @1' 'Text $2'
+mv 'Text $2' 'Лабораторная работа №1!/'
+cp 'Text @1' 'ФИО/'
+gzip 'Text @1' 'Text #3'
+tar -cf MyAchiv 'Text @1.gz' 'Text #3.gz'
+gunzip 'Text #3.gz'
+zcat 'Text @1.gz' | head -n 1 >> 'Text #3'
+printf '%s\n' 'Будь осторожен! Преступник вооружен!' >> 'Text #3'
+zcat 'Text @1.gz' | tac > 'ФИО/Result_one'
+mv 'ФИО/Result_one' 'ФИО/Result_two'
+cat 'ФИО'/T* > 'Лабораторная работа №1!'/Result_3
+uname -a >> 'Лабораторная работа №1!'/Result_3
+date >> 'Лабораторная работа №1!'/Result_3
+chmod 772 'Лабораторная работа №1!'
+chmod 200 'ФИО'
